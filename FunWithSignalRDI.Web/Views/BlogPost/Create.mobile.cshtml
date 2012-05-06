@@ -1,0 +1,37 @@
+﻿@model FunWithSignalR.Domain.Model.BlogPost
+@{
+    ViewBag.Title = "New Post";
+}
+@section Header {
+    @Html.ActionLink("Back", "Index", "Home", null, new { data_icon = "arrow-l", data_rel = "back" })
+    <h1>@ViewBag.Title</h1>
+}
+<div data-role="content">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <ul data-role="listview">
+            <li data-role="list-divider">
+                @Html.LabelFor(model => model.Title)
+            </li>
+            <li>
+                @Html.EditorFor(model => model.Title)
+                @Html.ValidationMessageFor(model => model.Title)
+            </li>
+            <li data-role="list-divider">
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Post)
+                </div>
+            </li>
+            <li>
+                <div class="editor-field">
+                    @Html.TextAreaFor(model => model.Post)
+                    @Html.ValidationMessageFor(model => model.Post)
+                </div>
+            </li>
+        </ul>
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    }
+</div>

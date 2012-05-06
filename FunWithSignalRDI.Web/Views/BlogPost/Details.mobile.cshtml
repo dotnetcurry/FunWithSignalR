@@ -1,0 +1,35 @@
+﻿@model FunWithSignalR.Domain.Model.BlogPost
+@{
+    ViewBag.Title = Model.Title;
+}
+@section Header {
+    @Html.ActionLink("Back", "Index", "Home", null, new { data_icon = "arrow-l", data_rel = "back" })
+    <h1>@ViewBag.Title</h1>
+}
+<div data-role="content">
+    <ul data-role="listview">
+        <li data-role="list-divider">@Html.DisplayFor(model => model.Title)</li>
+        <li>
+            <pre style="white-space: pre-line">
+                @Html.Encode(Model.Post)
+            </pre>
+        </li>
+    </ul>
+</div>
+@using (Html.BeginForm("Edit", "BlogPost", new { id = Model.Id }, FormMethod.Get))
+{
+    <button id="edit" name="edit" data-role="button" data-icon="grid">
+        Edit</button>
+}
+@using (Html.BeginForm("Review", "BlogPost", new { id = Model.Id }, FormMethod.Get))
+{
+    <button id="review" name="review" data-role="button" data-icon="search">
+        Review
+    </button>
+}
+@using (Html.BeginForm("Delete", "BlogPost", new { id = Model.Id }, FormMethod.Get))
+{
+    <button data-role="button" data-role="button" data-icon="delete">
+        Delete
+    </button>
+}

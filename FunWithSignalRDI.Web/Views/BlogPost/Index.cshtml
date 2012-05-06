@@ -1,0 +1,60 @@
+﻿@model IEnumerable<FunWithSignalR.Domain.Model.BlogPost>
+<head>
+    <meta charset="utf-8" />
+    <title>ASP.NET Web API</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/modernizr-2.0.6-development-only.js")" type="text/javascript"></script>
+    
+</head>
+<div id="body">
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>
+                    Multi-Edit using SignalR</h1>
+            </hgroup>
+            <p>
+                <strong>This is a simple application that demonstrates SignalR's persistent connection and
+                broadcasting capabilities.</strong>
+            </p>
+            <p>
+                To test out the sample, do the following
+            </p>
+            <ul>
+                <li>'Create New' post and Save It</li>
+                <li>From the Home page click on 'Review'</li>
+                <li>Share the Review URL with a fellow 'Reviewer' (or open it a new browser instance yourself)</li>
+                <li>Make changes, they automatically are broadcasted to all the Reviewers watching</li>
+            </ul>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        @{
+            ViewBag.Title = "Fun With SignalR";
+        }
+        <h2>
+            Existing Posts</h2>
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        @foreach (var item in Model)
+        {
+            <div class="post-index-item">
+                <div class="post-index-title">
+                    <strong>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </strong>
+                </div>
+                <div class="post-index-content">
+                    @Html.DisplayFor(modelItem => item.Post)
+                </div>
+                <div class="post-index-footer">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Review", "Review", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </div>
+            </div>            
+        }
+    </section>
+</div>

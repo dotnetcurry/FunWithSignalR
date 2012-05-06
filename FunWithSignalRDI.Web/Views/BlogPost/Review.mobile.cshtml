@@ -1,0 +1,73 @@
+﻿<script src="../../Scripts/diff_match_patch.js" type="text/javascript"></script>
+<script src="../../Scripts/jquery.signalR.min.js" type="text/javascript"></script>
+<script src="../../Scripts/json2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="@Url.Content("~/signalr/hubs")"></script>
+@model FunWithSignalR.Domain.Model.BlogPost
+@{
+    ViewBag.Title = "Review";
+}
+@section Header {
+    @Html.ActionLink("Back", "Index", "Home", null, new { data_icon = "arrow-l", data_rel = "back" })
+    <h1>@ViewBag.Title</h1>
+}
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.Id)
+    <div data-role="content">
+        <ul data-role="listview">
+            <li data-role="list-divider">@Html.LabelFor(model => model.Title)</li>
+            <li>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Title)
+                    @Html.ValidationMessageFor(model => model.Title)
+                </div>
+            </li>
+            <li data-role="list-divider">@Html.LabelFor(model => model.Post)</li>
+            <li>
+                <div class="editor-field">
+                    @Html.TextAreaFor(model => model.Post, new { rows = 20, cols = 100 })
+                    @Html.ValidationMessageFor(model => model.Post)
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <input type="submit" value="Save" />
+        <input type="hidden" id="sessinId" value="@Session.SessionID" />
+    </div>
+}
+<script type="text/javascript">
+
+    $(function () {
+        // Proxy created on the fly
+        var blog = $.connection.blogHub;
+        //Create instance of the diff-match-patch javascript class
+        var dmp = new diff_match_patch();
+
+        // Declare a function on the blog hub so the server can invoke it
+        blog.addMessage = function (message, sessnId, id) {
+
+            var sessId = $('#sessinId').val();
+            var blogId = $('#Id').val();
+
+            if (sessId != sessnId && (blogId == id)) {
+                dmp.Match_Distance = 1000;
+                dmp.Match_Threshold = 0.5;
+                dmp.Patch_DeleteThreshold = 0.5;
+
+                var patches = dmp.patch_make($('#Post').val(), message);
+                var results = dmp.patch_apply(patches, $('#Post').val());
+                $('#Post').val(results[0]);
+            }
+        };
+
+        // Start the connection
+        $.connection.hub.start();
+
+        $("#Post").keyup(function (event) {
+            var sessId = $("#sessinId").val();
+            blog.send($("#Post").val(), sessId, $("#Id").val());
+        });
+    });
+</script>

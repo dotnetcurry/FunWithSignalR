@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/mobile/jquery.mobile-1.0b3.min.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/mobile/Site.Mobile.css")" />
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.6.4.min.js")"></script>
+    <script type="text/javascript">
+        $(document).bind("mobileinit", function () {
+            // As of Beta 2, jQuery Mobile's Ajax navigation does not work in all cases (e.g.,
+            // when navigating from a mobile to a non-mobile page), hence disabling it.
+            $.mobile.ajaxEnabled = false;
+        });
+    </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/mobile/jquery.mobile-1.0b3.min.js")"></script>
+</head>
+<body>
+    <div data-role="page" data-theme="a">
+        @Html.Partial("_ViewSwitcher")
+        @if (IsSectionDefined("header"))
+        {
+            <div data-role="header" data-position="fixed">
+                @RenderSection("header")
+            </div>
+        }
+        @RenderSection("featured", false)
+        @RenderBody()
+    </div>
+</body>
+</html>

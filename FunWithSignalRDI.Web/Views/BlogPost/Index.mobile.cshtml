@@ -1,0 +1,22 @@
+﻿@model IEnumerable<FunWithSignalR.Domain.Model.BlogPost>
+@{
+    ViewBag.Title = "SignalR Fun";
+}
+@section header
+{
+    <h1>@ViewBag.Title</h1>
+    <div data-role="button" data-icon="plus" class="ui-btn-right">
+        @Html.ActionLink("New", "Create")
+    </div>
+}
+<div data-role="content">
+    <ul data-role="listview">
+        <li data-role="list-divider">Current Posts</li>
+        @foreach (var item in Model)
+        {
+            <li>
+                @Html.ActionLink(item.Title, "Details", new { id = item.Id })
+            </li>    
+        }
+    </ul>
+</div>

@@ -1,0 +1,36 @@
+﻿@model FunWithSignalR.Domain.Model.BlogPost
+@{
+    ViewBag.Title = "Details";
+}
+<div id="body">
+    <section class="content-wrapper main-content clear-fix">
+        <div class="content-wrapper">
+            <h2>
+                Details</h2>
+            <fieldset>
+                <legend>BlogPost</legend>
+                <div class="display-label">
+                    <h3>
+                        Title</h3>
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Title)
+                </div>
+                <div class="display-label">
+                    <h3>
+                        Post
+                    </h3>
+                </div>
+                <div class="display-field">
+                    <pre style="white-space:pre-line">
+                @Html.Encode(Model.Post)
+            </pre>
+                </div>
+            </fieldset>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+        </div>
+    </section>
+</div>

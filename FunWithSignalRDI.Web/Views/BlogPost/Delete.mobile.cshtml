@@ -1,0 +1,28 @@
+﻿@model FunWithSignalR.Domain.Model.BlogPost
+@{
+    ViewBag.Title = "Delete";
+}
+@section Header {
+    @Html.ActionLink("Back", "Index", "Home", null, new { data_icon = "arrow-l", data_rel = "back" })
+    <h1>@ViewBag.Title</h1>
+}
+<h3>
+    Are you sure you want to delete this?</h3>
+<div data-role="content">
+    <ul data-role="listview">
+        <li data-role="list-divider">
+            @Html.DisplayFor(model => model.Title)
+        </li>
+        <li>
+            <pre style="white-space: pre-line">
+            @Html.DisplayFor(model => model.Post)
+            </pre>
+        </li>
+    </ul>
+</div>
+@using (Html.BeginForm())
+{
+    <p>
+        <input type="submit" value="Delete" data-icon="delete" />
+    </p>
+}
