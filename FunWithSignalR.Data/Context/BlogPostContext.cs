@@ -18,7 +18,7 @@ namespace FunWithSignalR.Data.Context
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            Database.SetInitializer<BlogPostContext>(null);
+            Database.SetInitializer<BlogPostContext>(new CreateDatabaseIfNotExists<BlogPostContext>());
             
             modelBuilder.Entity<BlogPost>().ToTable("BlogPosts", _schemaName);
 

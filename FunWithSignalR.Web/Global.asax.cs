@@ -9,7 +9,7 @@ using System.Web.Routing;
 using FunWithSignalR;
 using System.Web.WebPages;
 
-namespace FunWithSignalRDI.Web
+namespace FunWithSignalR
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801

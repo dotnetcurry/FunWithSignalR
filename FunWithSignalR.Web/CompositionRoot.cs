@@ -29,7 +29,7 @@ namespace FunWithSignalR
         private static IBlogPostRepository InitializeRepository()
         {
             string blogRepositoryTypeName = ConfigurationManager.AppSettings["BlogRepositoryType"];
-            string connectionName = ConfigurationManager.ConnectionStrings[0].Name;
+            string connectionName = ConfigurationManager.ConnectionStrings["FunWithSignalRDB"].Name;
             string schemaName = ConfigurationManager.AppSettings["schemaName"];
             var blogRepositoryType = Type.GetType(blogRepositoryTypeName, true);
             var repository = (IBlogPostRepository)Activator.CreateInstance(blogRepositoryType, new object[] { connectionName, schemaName });
