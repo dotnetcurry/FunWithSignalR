@@ -8,6 +8,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using FunWithSignalR;
 using System.Web.WebPages;
+using Elmah;
 
 namespace FunWithSignalR
 {
@@ -64,5 +65,12 @@ namespace FunWithSignalR
             BundleTable.Bundles.RegisterTemplateBundles();
             RegisterDependencies();
         }
+
+        void ErrorLog_Filtering(object sender, ExceptionFilterEventArgs e)
+        {
+            if (e.Exception.Message.StartsWith(@"File does not exist"))
+                e.Dismiss();
+        }
+
     }
 }

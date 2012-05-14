@@ -1,5 +1,6 @@
-C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\MvcApplication1.dll
-C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\MvcApplication1.pdb
+C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\FunWithSignalR.Web.dll
+C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\FunWithSignalR.Web.pdb
+C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\Elmah.dll
 C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\EntityFramework.dll
 C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\FunWithSignalR.Data.dll
 C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\FunWithSignalR.Domain.dll
@@ -7,6 +8,7 @@ C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithS
 C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\Newtonsoft.Json.dll
 C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\SignalR.dll
 C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\SignalR.Hosting.AspNet.dll
+C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\SignalR.Hosting.Common.dll
 C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\System.Json.dll
 C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\System.Net.Http.dll
 C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\System.Net.Http.Formatting.dll
@@ -25,8 +27,10 @@ C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithS
 C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\FunWithSignalR.Data.pdb
 C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\FunWithSignalR.Domain.pdb
 C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\EntityFramework.xml
-C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\Newtonsoft.Json.pdb
 C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\Newtonsoft.Json.xml
+C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\SignalR.xml
+C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\SignalR.Hosting.AspNet.xml
+C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\SignalR.Hosting.Common.xml
 C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\System.Json.xml
 C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\System.Net.Http.xml
 C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\System.Net.Http.Formatting.xml
@@ -41,5 +45,5 @@ C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithS
 C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\System.Web.WebPages.Deployment.xml
 C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\bin\System.Web.WebPages.Razor.xml
 C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\obj\Debug\MvcApplication1.dll
-C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\obj\Debug\MvcApplication1.pdb
+C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\obj\Debug\FunWithSignalR.Web.dll
+C:\Users\Sumit\Documents\Visual Studio 2010\Projects\Git\FunWithSignalR\FunWithSignalR.Web\obj\Debug\FunWithSignalR.Web.pdb
